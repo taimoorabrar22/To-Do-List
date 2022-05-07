@@ -23,15 +23,15 @@ const Item = mongoose.model("Item", itemsSchema);
 
 
 const item1 = new Item({
-  name: "Welcome to your todolist!"
+  name: "Welcome to banking app test version!"
 });
 
 const item2 = new Item({
-  name: "Hit the + button to add a new item."
+  name: "Hit the + button to add a new client"
 });
 
 const item3 = new Item({
-  name: "<-- Hit this to delete an item."
+  name: "<-- Hit this to delete a client."
 });
 
 const defaultItems = [item1, item2, item3];
@@ -117,7 +117,7 @@ app.post("/delete", function(req, res){
   if (listName === "Today") {
     Item.findByIdAndRemove(checkedItemId, function(err){
       if (!err) {
-        console.log("Successfully deleted checked item.");
+        console.log("Successfully deleted client.");
         res.redirect("/");
       }
     });
